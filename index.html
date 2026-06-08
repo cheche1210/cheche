@@ -8,23 +8,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --bg:      #09090F;
-  --bg2:     #0D0D15;
-  --bg3:     #111118;
-  --bg4:     #16161F;
-  --pink:    #FF8FB3;
-  --pink2:   #FFB3CA;
-  --pink-dim:rgba(255,143,179,0.08);
-  --pink-b:  rgba(255,143,179,0.22);
-  --text:    #EEEEF5;
-  --text2:   #B0B4CC;
-  --text3:   #60647A;
-  --border:  rgba(255,255,255,0.06);
-  --border2: rgba(255,255,255,0.11);
-  --card:    rgba(255,255,255,0.02);
-  --gold:    #F5A623;
-  --blue:    #5B9CF6;
-  --purple:  #9B7EFF;
+  --bg:      #FBF8F2;
+  --bg2:     #F5EFE4;
+  --bg3:     #EDE4D6;
+  --bg4:     #E4D8C6;
+  --pink:    #D4681A;
+  --pink2:   #E8873A;
+  --pink-dim:rgba(212,104,26,0.07);
+  --pink-b:  rgba(212,104,26,0.2);
+  --text:    #3D2200;
+  --text2:   #7A4E1E;
+  --text3:   #B8916A;
+  --border:  rgba(61,34,0,0.07);
+  --border2: rgba(61,34,0,0.13);
+  --card:    rgba(61,34,0,0.02);
+  --gold:    #C4900A;
+  --blue:    #A0521A;
+  --purple:  #8B4513;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -34,7 +34,7 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-seri
 /* ─── INTRO ─── */
 #intro{
   position:fixed;inset:0;z-index:9999;
-  background:#FF8FB3;
+  background:#D4681A;
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
   transition:transform 0.95s cubic-bezier(0.76,0,0.24,1);
@@ -51,7 +51,7 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-seri
   font-family:'Inter',sans-serif;
   font-size:clamp(36px,6.5vw,88px);
   font-weight:900;letter-spacing:-0.04em;
-  color:#16120D;
+  color:#F7F3EC;
   transform:translateY(110%);
   transition:transform 0.85s cubic-bezier(0.16,1,0.3,1);
 }
@@ -60,7 +60,7 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-seri
   font-family:'Inter',sans-serif;
   font-size:11px;font-weight:700;
   letter-spacing:0.22em;text-transform:uppercase;
-  color:rgba(22,18,13,0.4);
+  color:rgba(247,243,236,0.6);
   margin-top:18px;opacity:0;
   transition:opacity 0.6s ease 0.7s;
 }
@@ -133,7 +133,7 @@ nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
   padding:0 60px;height:60px;
-  background:rgba(9,9,15,0.9);
+  background:rgba(251,248,242,0.95);
   backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
 }
@@ -161,7 +161,7 @@ nav{
 }
 .hero-noise{
   position:absolute;inset:0;
-  background:radial-gradient(ellipse 80% 50% at 60% 50%,rgba(255,143,179,0.05) 0%,transparent 70%);
+  background:radial-gradient(ellipse 80% 50% at 60% 50%,rgba(212,104,26,0.06) 0%,transparent 70%);
   pointer-events:none;
 }
 .hero-left{}
@@ -177,6 +177,7 @@ nav{
   font-size:clamp(52px,7vw,96px);
   font-weight:900;letter-spacing:-0.04em;line-height:1;
   margin-bottom:6px;
+  white-space:nowrap;
 }
 .hero-name span{color:var(--pink);}
 .hero-role{
@@ -186,14 +187,14 @@ nav{
 }
 .hero-statement{
   font-size:16px;color:var(--text2);line-height:1.9;
-  max-width:460px;margin-bottom:44px;font-weight:300;
+  max-width:560px;margin-bottom:44px;font-weight:300;
   border-left:2px solid var(--pink-b);
   padding-left:20px;
 }
 .hero-cta{display:flex;gap:12px;}
 .btn-p{
   padding:13px 28px;border-radius:6px;
-  background:var(--pink);color:#1a0a12;
+  background:var(--pink);color:#F7F3EC;
   font-size:13px;font-weight:700;letter-spacing:0.04em;
   text-decoration:none;transition:opacity 0.2s,transform 0.2s;
 }
@@ -233,7 +234,7 @@ nav{
 /* ─── PROJECT NAV ─── */
 #project-nav{
   position:sticky;top:60px;z-index:90;
-  background:rgba(9,9,15,0.97);
+  background:rgba(251,248,242,0.97);
   backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
   padding:0 60px;
@@ -571,7 +572,7 @@ nav{
   transition:all 0.2s;width:100%;
 }
 .contact-link:hover{border-color:var(--pink-b);color:var(--pink);}
-.contact-link.primary{background:var(--pink);color:#1a0a12;border-color:var(--pink);font-weight:700;}
+.contact-link.primary{background:var(--pink);color:#F7F3EC;border-color:var(--pink);font-weight:700;}
 .contact-link.primary:hover{opacity:0.88;}
 .cl-icon{width:16px;height:16px;opacity:0.5;}
 
@@ -643,7 +644,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 <!-- ─── NAV ─── -->
 <nav>
-  <div class="nav-logo">CHE</div>
+  <div class="nav-logo">CHECHE</div>
   <div class="nav-links">
     <a href="#hero">소개</a>
     <a href="#philosophy">가치관</a>
@@ -660,11 +661,11 @@ window.addEventListener('DOMContentLoaded', () => {
   <div class="hero-noise"></div>
   <div class="hero-left">
     <div class="hero-eyebrow">Product Manager · 7 Years</div>
-    <h1 class="hero-name">천하은<span>.</span></h1>
+    <h1 class="hero-name">천하은<span>입니다.</span></h1>
     <div class="hero-role">우아한형제들 · SSG.COM · 교보문고</div>
     <p class="hero-statement">
-      사공이 스무 명이어도 방향은 하나입니다.<br>
-      구조를 설계하고, 기준을 만들고, 숫자로 증명합니다.
+      더 많은 사람의 일상이 조금 더 쉬워지는 서비스를 만들고 싶습니다.<br>
+      그래서 구조를 먼저 보고, 기준을 만들고, 숫자로 확인합니다.
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn-p">프로젝트 보기 →</a>
@@ -701,22 +702,22 @@ window.addEventListener('DOMContentLoaded', () => {
     <div>
       <div class="sec-tag">PM 가치관</div>
       <h2 style="font-size:clamp(28px,3.5vw,48px);font-weight:900;letter-spacing:-0.025em;line-height:1.2;margin-bottom:0;">
-        기능을 만들기 전에<br><span style="color:var(--pink)">기준</span>을 먼저 만듭니다.
+        기능을 만들기 전에<br><span style="color:var(--pink)">목적</span>을 먼저 묻습니다.
       </h2>
     </div>
     <div>
       <div style="display:flex;flex-direction:column;">
         <div style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid var(--border);">
           <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:var(--pink);flex-shrink:0;margin-top:3px;letter-spacing:0.1em;">01</span>
-          <span style="font-size:15px;color:var(--text2);line-height:1.8;"><strong style="color:var(--text);font-weight:700;">UI보다 구조 먼저.</strong> 클레임이 반복된다면 UI를 고치기 전에 정책을 다시 봅니다.</span>
+          <span style="font-size:15px;color:var(--text2);line-height:1.8;"><strong style="color:var(--text);font-weight:700;">줏대가 있어야 합니다.</strong> 사공이 스무 명이어도 방향은 PM이 잡습니다. 모두가 다른 말을 할 때 기준을 만드는 게 PM의 일이라고 생각합니다.</span>
         </div>
         <div style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid var(--border);">
           <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:var(--pink);flex-shrink:0;margin-top:3px;letter-spacing:0.1em;">02</span>
-          <span style="font-size:15px;color:var(--text2);line-height:1.8;"><strong style="color:var(--text);font-weight:700;">기준을 공유하면 결정이 위임된다.</strong> PM이 모든 걸 판단하는 구조는 확장되지 않습니다.</span>
+          <span style="font-size:15px;color:var(--text2);line-height:1.8;"><strong style="color:var(--text);font-weight:700;">내가 먼저 납득돼야 합니다.</strong> 과제를 시작하기 전에 내가 이걸 왜 만들어야 하는지 스스로 설득이 안 되면, 고객도 설득할 수 없습니다. 그래서 목적이 흐릿한 과제는 시작 전에 파고듭니다.</span>
         </div>
         <div style="display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
           <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;color:var(--pink);flex-shrink:0;margin-top:3px;letter-spacing:0.1em;">03</span>
-          <span style="font-size:15px;color:var(--text2);line-height:1.8;"><strong style="color:var(--text);font-weight:700;">리스크는 개발 전에 잡아야 한다.</strong> 60억 비용 손실 구조는 코드가 아니라 정책 설계 단계에서 발견했습니다.</span>
+          <span style="font-size:15px;color:var(--text2);line-height:1.8;"><strong style="color:var(--text);font-weight:700;">일상에 녹아드는 서비스를 만들고 싶습니다.</strong> 거창한 혁신이 아니라, 사람들이 살아가는 데 자연스럽게 스며드는 것. 내가 먼저 쓰고 싶은 서비스가 그 기준입니다.</span>
         </div>
       </div>
     </div>
@@ -726,11 +727,12 @@ window.addEventListener('DOMContentLoaded', () => {
 <!-- ─── PROJECT NAV ─── -->
 <div id="project-nav">
   <button class="pnav-btn active" onclick="focusP('p1',this)"><span class="pnav-dot"></span>01 배민클럽 런칭</button>
-  <button class="pnav-btn" onclick="focusP('p2',this)"><span class="pnav-dot"></span>02 YouTube 결합상품</button>
-  <button class="pnav-btn" onclick="focusP('p3',this)"><span class="pnav-dot"></span>03 로그인 개편</button>
-  <button class="pnav-btn" onclick="focusP('p4',this)"><span class="pnav-dot"></span>04 해지방어 실험</button>
-  <button class="pnav-btn" onclick="focusP('p5',this)"><span class="pnav-dot"></span>05 교보 회원가입</button>
+  <button class="pnav-btn" onclick="focusP('p4',this)"><span class="pnav-dot"></span>02 해지방어 실험</button>
+  <button class="pnav-btn" onclick="focusP('p4b',this)"><span class="pnav-dot"></span>03 유저 커뮤니케이션</button>
+  <button class="pnav-btn" onclick="focusP('p2',this)"><span class="pnav-dot"></span>04 YouTube 결합상품</button>
+  <button class="pnav-btn" onclick="focusP('p3',this)"><span class="pnav-dot"></span>05 로그인 개편</button>
   <button class="pnav-btn" onclick="focusP('p6',this)"><span class="pnav-dot"></span>06 SSG ID/PW</button>
+  <button class="pnav-btn" onclick="focusP('p5',this)"><span class="pnav-dot"></span>07 교보 회원가입</button>
 </div>
 
 <!-- ─── PROJECTS ─── -->
@@ -738,7 +740,7 @@ window.addEventListener('DOMContentLoaded', () => {
   <div class="projects-intro">
     <div class="projects-intro-left">
       <div class="sec-tag">Case Studies</div>
-      <h2 class="sec-h">직접 설계한 문제와 해법</h2>
+      <h2 class="sec-h">7년동안 고민하고 결정한 것들</h2>
     </div>
     <div class="projects-hint">클릭하면 케이스 전문을 볼 수 있습니다</div>
   </div>
@@ -768,6 +770,12 @@ window.addEventListener('DOMContentLoaded', () => {
     <div class="pcard-detail">
       <div class="case-wrap">
         <div class="case-body">
+          <div class="case-block">
+            <div class="case-blk-label">이 유저들의 이야기</div>
+            <div class="case-blk-text">
+              <p>배달앱을 매일 쓰지만, 주문할 때마다 배달팁 때문에 찜찜한 감정을 느끼는 사람들이 있었습니다. <strong>"오늘도 배달팁 냈네"</strong>라는 작은 불만이 쌓이면서 주문 자체를 포기하거나, 금액이 낮은 메뉴는 아예 시도조차 안 하는 행동으로 이어졌습니다. 이 사람들은 배민을 싫어하는 게 아니었습니다. 매번 지불하는 비용이 아깝다는 감각이 없어지기를 원했습니다.</p>
+            </div>
+          </div>
           <div class="case-block">
             <div class="case-blk-label">문제 정의</div>
             <div class="case-blk-text">
@@ -804,11 +812,11 @@ window.addEventListener('DOMContentLoaded', () => {
           <div class="case-block">
             <div class="case-insight">
               <div class="ci-mark">인사이트</div>
-              <div class="ci-text">구독 서비스의 성패는 기능 목록이 아니라 <em>고객이 가치를 인식하는 순서</em>에 달려 있습니다. 그리고 요구사항이 폭발하는 환경에서 PM이 해야 할 가장 중요한 일은 기준을 만드는 것입니다.</div>
+              <div class="ci-text">구독 서비스는 기능이 아니라 <em>고객이 가치를 인식하는 순서</em>가 결정합니다. 요구사항이 쏟아지는 환경에서 PM이 먼저 해야 할 일은 기준을 만드는 것이었습니다. 그리고 런칭보다 어려운 건 유지였습니다. 그 질문이 이후 실험 프로세스와 유저 커뮤니케이션 과제로 이어졌습니다.</div>
             </div>
             <div class="case-tradeoff">
               <div class="ct-label">트레이드오프</div>
-              <div class="ct-text">1단계 무료체험은 배달팁 비용을 수반합니다. 단기 비용을 감수하고 유료 전환 거부감을 낮추는 것이 장기적으로 낫다는 판단을 데이터 기반으로 내렸고, 70% 유료 전환율이 그것을 증명했습니다.</div>
+              <div class="ct-text">무료체험은 배달팁 비용을 수반합니다. 단기 비용보다 유료 전환 거부감을 낮추는 게 낫다고 판단했고, 70% 전환율이 그 결과입니다.</div>
             </div>
           </div>
         </div>
@@ -832,10 +840,190 @@ window.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 
+  <!-- ── P4 ── -->
+  <div class="pcard" id="p4">
+    <div class="pcard-summary" onclick="toggleP('p4')">
+      <div class="pcard-idx">02</div>
+      <div class="pcard-main">
+        <div class="pcard-meta">
+          <span class="co-chip co-baemin">배달의민족</span>
+          <span class="pcard-period">2025.05 — 2025.07 · 워킹그룹 리드</span>
+        </div>
+        <div class="pcard-title">배민클럽 해지방어 실험 프로세스 구축</div>
+        <div class="pcard-oneliner">단 한 번의 실험이 아니라, 반복 가능한 실험 사이클을 조직에 이식했습니다. 이 구조가 2026년 애자일 조직 개편의 기반이 됐고 구독자 680만의 성장 엔진이 됐습니다.</div>
+      </div>
+      <div class="pcard-kpis">
+        <div class="pkpi"><div class="pkpi-val" style="color:var(--pink)">680만</div><div class="pkpi-lbl">현재 배민클럽 구독자</div></div>
+        <div class="pkpi"><div class="pkpi-val" style="color:var(--gold)">애자일</div><div class="pkpi-lbl">2026년 조직 개편 기반</div></div>
+        <div class="pkpi"><div class="pkpi-val" style="color:var(--text2)">-2%p</div><div class="pkpi-lbl">일별 해지율 감소</div></div>
+      </div>
+    </div>
+    <div class="pcard-footer" onclick="toggleP('p4')">
+      <div class="pcard-quote">"PM의 역할은 실험을 잘 하는 게 아니라 팀 전체가 실험의 언어를 배우게 하는 것입니다."</div>
+      <div class="pcard-toggle"><span>케이스 보기</span><div class="toggle-icon">+</div></div>
+    </div>
+    <div class="pcard-detail">
+      <div class="case-wrap">
+        <div class="case-body">
+          <div class="case-block">
+            <div class="case-blk-label">이 유저들의 이야기</div>
+            <div class="case-blk-text">
+              <p>배민클럽에 가입했지만 막상 쓰다 보면 <strong>"내가 왜 돈을 내고 있지?"</strong>라는 생각이 드는 구독자들이 있었습니다. 배달팁 혜택은 주문할 때 잠깐 보이다가 사라지고, 그 외에 어떤 혜택이 있는지 눈에 들어오지 않았습니다. 구독을 해지하고 싶은 게 아니었습니다. 내가 받고 있는 가치를 실감하지 못하고 있었을 뿐입니다.</p>
+            </div>
+          </div>
+          <div class="case-block">
+            <div class="case-blk-label">문제 정의</div>
+            <div class="case-blk-text">
+              <p>구독자 이탈이 늘고 있었지만 해지 고객의 행동을 체계적으로 분석하는 구조 자체가 없었습니다. 한 번 실험하고 끝나는 방식이 반복되었고, 구조적 원인 파악이 불가능했습니다.</p>
+              <p>문제는 실험 결과가 없다는 게 아니었습니다. <strong>실험을 반복할 수 있는 시스템이 없다는 것</strong>이었습니다.</p>
+            </div>
+          </div>
+          <div class="case-block">
+            <div class="case-blk-label">내 결정과 이유</div>
+            <div class="case-steps">
+              <div class="case-step">
+                <div class="cstep-n">01</div>
+                <div class="cstep-b">
+                  <div class="cstep-title">워킹그룹을 만들고 반복 사이클을 설계했습니다</div>
+                  <div class="cstep-desc">n차 실험 설계 → 결과 공유 → n+1차 킥오프 → 개선안 도출. <strong>이 사이클이 PM 없이도 돌아가도록</strong> 실험 설계서와 결과 보고서 체계를 만들었습니다.</div>
+                </div>
+              </div>
+              <div class="case-step">
+                <div class="cstep-n">02</div>
+                <div class="cstep-b">
+                  <div class="cstep-title">가설을 촘촘하게 설계했습니다</div>
+                  <div class="cstep-desc">실험 전 가설을 최대한 구체화하면 실험 비용이 줄고 위너 도출률이 높아집니다. <strong>진행한 주요 실험 가설 방향이 모두 위너와 일치</strong>했습니다. 운이 아니라 설계의 결과입니다.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-block">
+            <div class="case-blk-label">주요 실험 결과</div>
+            <div class="case-steps">
+              <div class="case-step">
+                <div class="cstep-n" style="color:var(--gold)">✓</div>
+                <div class="cstep-b">
+                  <div class="cstep-title">바텀시트 혜택 인지 실험 — 성공</div>
+                  <div class="cstep-desc">주문 시점에 배민클럽 혜택을 바텀시트로 노출하는 실험을 설계·진행했습니다. A/B 테스트 결과 <strong>구독 잔존율이 8% 높아지는 긍정적 결과</strong>를 확보했습니다. 고객이 혜택을 '쓰는 순간'에 인지시키는 것이 효과적임을 검증했습니다.</div>
+                </div>
+              </div>
+              <div class="case-step">
+                <div class="cstep-n" style="color:var(--pink)">✕</div>
+                <div class="cstep-b">
+                  <div class="cstep-title">개인화 절감 금액 노출 실험 — 실패</div>
+                  <div class="cstep-desc">가입율을 높이기 위해 개인 주문 데이터를 활용해 "가입하면 N원 아낄 수 있어요"를 노출했습니다. 그러나 주문이 많지 않은 고객에게는 절감 금액이 낮게 표시되어 <strong>오히려 반감이 높아지고 가입율이 떨어지는 결과</strong>가 나왔습니다. 개인화 데이터 활용이 항상 긍정적이지 않다는 것을 배웠고, 이후 절감 금액 직접 노출 대신 다른 방향을 탐색했습니다.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-block">
+            <div class="case-insight">
+              <div class="ci-mark">인사이트</div>
+              <div class="ci-text">PM의 역할은 실험을 잘 하는 게 아닙니다. <em>팀 전체가 실험의 언어로 일하게 만드는 것</em>이 PM의 일입니다. 이 프로세스는 2026년 애자일 조직 개편의 기반이 됐고, 배민클럽이 321만에서 680만으로 성장하는 구조가 됐습니다. 반복 가능한 실험 구조가 생기자, 더 근본적인 질문을 할 수 있게 됐습니다. 왜 가입을 안 하고, 왜 오래 쓰지 않는가.</div>
+            </div>
+          </div>
+        </div>
+        <div class="case-sidebar">
+          <div class="cs-results">
+            <div class="cs-result"><div class="cs-rv" style="color:var(--pink)">680만</div><div class="cs-rl">현재 배민클럽 구독자</div><div class="cs-rs">'24.09 321만 → '26.06</div></div>
+            <div class="cs-result"><div class="cs-rv" style="color:var(--gold)">애자일</div><div class="cs-rl">2026년 조직 개편의 기반</div><div class="cs-rs">실험 프로세스가 공식 채택</div></div>
+            <div class="cs-result"><div class="cs-rv" style="color:var(--blue)">-2%p</div><div class="cs-rl">일별 해지율 감소</div><div class="cs-rs">전체 대비 기준</div></div>
+            <div class="cs-result"><div class="cs-rv" style="color:var(--text2)">-5%</div><div class="cs-rl">해지방어 영역 이탈율 감소</div><div class="cs-rs">구조적 개선 기반 마련</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── P4B ── -->
+  <div class="pcard" id="p4b">
+    <div class="pcard-summary" onclick="toggleP('p4b')">
+      <div class="pcard-idx">03</div>
+      <div class="pcard-main">
+        <div class="pcard-meta">
+          <span class="co-chip co-baemin">배달의민족</span>
+          <span class="pcard-period">2026.04 — 2026.05 · 과제 리드</span>
+        </div>
+        <div class="pcard-title">배민클럽 가입·잔존율을 올린 유저 커뮤니케이션 전략</div>
+        <div class="pcard-oneliner">가장 트래픽이 높은 지면을 찾아 진입점을 심었습니다. 고객이 커뮤니케이션을 찾아오게 만들지 않고, 고객이 이미 있는 곳으로 들어갔습니다.</div>
+      </div>
+      <div class="pcard-kpis">
+        <div class="pkpi"><div class="pkpi-val" style="color:var(--pink)">+8%</div><div class="pkpi-lbl">구독 잔존율 상승</div></div>
+        <div class="pkpi"><div class="pkpi-val" style="color:var(--gold)">진행중</div><div class="pkpi-lbl">개인화 혜택 실험</div></div>
+      </div>
+    </div>
+    <div class="pcard-footer" onclick="toggleP('p4b')">
+      <div class="pcard-quote">"고객을 커머스로 데려오려 하지 않고, 고객이 이미 있는 곳으로 들어갔습니다."</div>
+      <div class="pcard-toggle"><span>케이스 보기</span><div class="toggle-icon">+</div></div>
+    </div>
+    <div class="pcard-detail">
+      <div class="case-wrap">
+        <div class="case-body">
+          <div class="case-block">
+            <div class="case-blk-label">이 유저들의 이야기</div>
+            <div class="case-blk-text">
+              <p>배민클럽이 존재한다는 건 알지만 <strong>"나한테 필요한 서비스인가?"</strong>라는 확신이 없어서 가입하지 않는 사람들이 있었습니다. 또 가입은 했지만 일상 속에서 혜택을 인식할 접점이 없어 "쓰고 있는 건지 모르겠다"는 상태로 흘러가다 조용히 해지하는 구독자들도 있었습니다. 이탈을 막는 문제가 아니었습니다. <strong>고객이 혜택을 발견하지 못하고 있다는 것</strong>이 진짜 문제였습니다.</p>
+            </div>
+          </div>
+          <div class="case-block">
+            <div class="case-blk-label">문제 정의</div>
+            <div class="case-blk-text">
+              <p>출발점은 "왜 해지하지?"가 아니었습니다. <strong>"왜 사람들은 가입을 안 하고, 왜 오래 쓰지 않는 걸까?"</strong>라는 질문에서 시작했습니다.</p>
+              <p>고객 데이터를 들여다보니 배민클럽의 혜택 자체가 부족한 게 아니었습니다. 고객이 자신에게 맞는 혜택을 발견할 접점이 없었고, 그 결과 가입 동기도, 유지 동기도 만들어지지 않고 있었습니다. 문제는 상품이 아니라 <strong>혜택을 전달하는 방식</strong>에 있었습니다.</p>
+            </div>
+          </div>
+          <div class="case-block">
+            <div class="case-blk-label">실험 과정과 결과</div>
+            <div class="case-steps">
+              <div class="case-step">
+                <div class="cstep-n" style="color:var(--gold)">01 ✓</div>
+                <div class="cstep-b">
+                  <div class="cstep-title">고트래픽 지면에 진입점을 심었습니다 — 가입률 +10%</div>
+                  <div class="cstep-desc">배민에서 가장 트래픽이 높은 지면은 장바구니와 주문서입니다. 주문 도메인을 설득해 이 두 지면에 배민클럽 가입 동선을 추가했습니다. 배민클럽 가입 시와 미가입 시의 금액 차이를 주문 시점에 직접 보여주는 방식이었습니다. A/B 테스트 결과 <strong>구독 잔존율 8% 상승, 가입률 10%+</strong>를 확인했습니다. 고객이 커뮤니케이션을 찾아오게 만들지 않고, 고객이 이미 있는 곳으로 들어간 것이 핵심이었습니다.</div>
+                </div>
+              </div>
+              <div class="case-step">
+                <div class="cstep-n" style="color:var(--pink)">02 ✕</div>
+                <div class="cstep-b">
+                  <div class="cstep-title">개인화 절감 금액 노출 실험 — 실패, 그리고 인사이트</div>
+                  <div class="cstep-desc">가입율을 높이기 위해 개인 주문 데이터를 기반으로 "가입하면 N원 아낄 수 있어요"를 노출했습니다. 그러나 주문 빈도가 낮은 고객에게는 절감 금액이 작게 표시되어 <strong>오히려 반감이 높아지고 가입율이 하락</strong>했습니다. '손해 프레이밍'은 고객을 설득하는 게 아니라 자신이 적게 쓴다는 사실을 각인시키는 역효과가 있었습니다.</div>
+                </div>
+              </div>
+              <div class="case-step">
+                <div class="cstep-n" style="color:var(--blue)">03 →</div>
+                <div class="cstep-b">
+                  <div class="cstep-title">방향 전환 — 개인화 혜택 우선순위 노출, 실험 진행 중</div>
+                  <div class="cstep-desc">절감 금액 대신, <strong>고객 데이터 기반으로 혜택의 노출 우선순위를 개인화</strong>하는 방향으로 전환했습니다. 치킨을 자주 주문하는 고객에게는 치킨 쿠폰을, 카페 메뉴를 즐기는 고객에게는 음료 할인을 먼저 보여주는 방식입니다. 현재 실험 진행 중이며, 중간 지표에서 실험군(B군)의 가입 수치가 대조군 대비 우위를 보이고 있습니다.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-block">
+            <div class="case-insight">
+              <div class="ci-mark">인사이트</div>
+              <div class="ci-text">같은 개인화 데이터도 <em>어떤 방식으로 전달하느냐</em>에 따라 결과가 달라집니다. 절감 금액(손해 회피)에서 맞춤 혜택(가치 제공)으로 바꾼 건 숫자를 바꾼 게 아니라 고객을 보는 관점을 바꾼 것입니다. 아직 답을 찾는 중입니다. 그게 지금 제가 가장 재밌게 하고 있는 일입니다.</div>
+            </div>
+            <div class="case-tradeoff">
+              <div class="ct-label">하지 않은 것</div>
+              <div class="ct-text">절감 금액 노출이 실패했을 때 "더 큰 금액을 보여주면 되지 않을까"는 선택하지 않았습니다. 숫자 크기가 아니라 프레이밍 자체가 문제라는 분석을 믿고, 설계를 바꾸는 쪽을 택했습니다.</div>
+            </div>
+          </div>
+        </div>
+        <div class="case-sidebar">
+          <div class="cs-results">
+            <div class="cs-result"><div class="cs-rv" style="color:var(--pink)">+10%</div><div class="cs-rl">배민클럽 가입률 상승</div><div class="cs-rs">장바구니·주문서 진입점 전략</div></div>
+            <div class="cs-result"><div class="cs-rv" style="color:var(--gold)">+8%</div><div class="cs-rl">구독 잔존율 상승</div><div class="cs-rs">주문 시점 혜택 인지 실험</div></div>
+            <div class="cs-result"><div class="cs-rv" style="color:var(--blue)">B &gt; A</div><div class="cs-rl">개인화 혜택 실험군 우위</div><div class="cs-rs">중간 지표 기준 · 실험 진행 중</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── P2 ── -->
   <div class="pcard" id="p2">
     <div class="pcard-summary" onclick="toggleP('p2')">
-      <div class="pcard-idx">02</div>
+      <div class="pcard-idx">04</div>
       <div class="pcard-main">
         <div class="pcard-meta">
           <span class="co-chip co-baemin">배달의민족</span>
@@ -893,11 +1081,11 @@ window.addEventListener('DOMContentLoaded', () => {
           <div class="case-block">
             <div class="case-insight">
               <div class="ci-mark">인사이트</div>
-              <div class="ci-text">60억 리스크는 개발 버그가 아니었습니다. <em>정산 구조와 기준 시점의 불일치</em>에서 발생한 것입니다. PM이 정책 설계 단계에서 이를 먼저 발견하는 것 — 그게 가장 비싼 기여입니다.</div>
+              <div class="ci-text">60억 리스크는 개발 버그가 아니었습니다. <em>정산 구조와 기준 시점의 불일치</em>에서 나온 것입니다. PM이 정책 설계 단계에서 먼저 발견하는 것, 그게 가장 앞단의 기여입니다.</div>
             </div>
             <div class="case-tradeoff">
               <div class="ct-label">트레이드오프</div>
-              <div class="ct-text">결합상품 전용 해지 정책 신설은 내부 정책 일관성을 일부 훼손합니다. 그러나 일관성보다 60억 리스크 해소가 명백히 중요하다고 판단, 별도 정책을 만들어 예외 케이스로 관리하는 방식을 선택했습니다.</div>
+              <div class="ct-text">결합상품 전용 해지 정책 신설은 내부 정책 일관성을 깹니다. 그래도 60억 리스크 해소가 더 중요하다고 봤고, 예외 케이스로 별도 관리하는 방식을 선택했습니다.</div>
             </div>
           </div>
         </div>
@@ -924,7 +1112,7 @@ window.addEventListener('DOMContentLoaded', () => {
   <!-- ── P3 ── -->
   <div class="pcard" id="p3">
     <div class="pcard-summary" onclick="toggleP('p3')">
-      <div class="pcard-idx">03</div>
+      <div class="pcard-idx">05</div>
       <div class="pcard-main">
         <div class="pcard-meta">
           <span class="co-chip co-baemin">배달의민족</span>
@@ -975,7 +1163,7 @@ window.addEventListener('DOMContentLoaded', () => {
           <div class="case-block">
             <div class="case-insight">
               <div class="ci-mark">인사이트</div>
-              <div class="ci-text">작은 UX 변화가 <em>사용자 구성 자체를 바꿀 수 있습니다.</em> 시니어 30% 증가는 전환율 개선이 아니라, 기존에 배민에 진입하지 못하던 사용자층을 구조적으로 유입시킨 결과입니다.</div>
+              <div class="ci-text">작은 UX 변화가 <em>사용자 구성 자체를 바꿀 수 있습니다.</em> 시니어 30% 증가는 전환율을 높인 게 아니라, 기존에 배민에 진입하지 못하던 사람들을 구조적으로 들어오게 한 결과입니다.</div>
             </div>
           </div>
         </div>
@@ -997,153 +1185,10 @@ window.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 
-  <!-- ── P4 ── -->
-  <div class="pcard" id="p4">
-    <div class="pcard-summary" onclick="toggleP('p4')">
-      <div class="pcard-idx">04</div>
-      <div class="pcard-main">
-        <div class="pcard-meta">
-          <span class="co-chip co-baemin">배달의민족</span>
-          <span class="pcard-period">2025.05 — 2025.07 · 워킹그룹 리드</span>
-        </div>
-        <div class="pcard-title">배민클럽 해지방어 실험 프로세스 구축</div>
-        <div class="pcard-oneliner">단 한 번의 실험이 아니라, 반복 가능한 실험 사이클을 조직에 이식했습니다. 이 구조가 2026년 애자일 조직 개편의 기반이 됐고 구독자 680만의 성장 엔진이 됐습니다.</div>
-      </div>
-      <div class="pcard-kpis">
-        <div class="pkpi"><div class="pkpi-val" style="color:var(--pink)">680만</div><div class="pkpi-lbl">현재 배민클럽 구독자</div></div>
-        <div class="pkpi"><div class="pkpi-val" style="color:var(--gold)">애자일</div><div class="pkpi-lbl">2026년 조직 개편 기반</div></div>
-        <div class="pkpi"><div class="pkpi-val" style="color:var(--text2)">-2%p</div><div class="pkpi-lbl">일별 해지율 감소</div></div>
-      </div>
-    </div>
-    <div class="pcard-footer" onclick="toggleP('p4')">
-      <div class="pcard-quote">"PM의 역할은 실험을 잘 하는 게 아니라 팀 전체가 실험의 언어를 배우게 하는 것입니다."</div>
-      <div class="pcard-toggle"><span>케이스 보기</span><div class="toggle-icon">+</div></div>
-    </div>
-    <div class="pcard-detail">
-      <div class="case-wrap">
-        <div class="case-body">
-          <div class="case-block">
-            <div class="case-blk-label">문제 정의</div>
-            <div class="case-blk-text">
-              <p>구독자 이탈이 늘고 있었지만 해지 고객의 행동을 체계적으로 분석하는 구조 자체가 없었습니다. 한 번 실험하고 끝나는 방식이 반복되었고, 구조적 원인 파악이 불가능했습니다.</p>
-              <p>문제는 실험 결과가 없다는 게 아니었습니다. <strong>실험을 반복할 수 있는 시스템이 없다는 것</strong>이었습니다.</p>
-            </div>
-          </div>
-          <div class="case-block">
-            <div class="case-blk-label">내 결정과 이유</div>
-            <div class="case-steps">
-              <div class="case-step">
-                <div class="cstep-n">01</div>
-                <div class="cstep-b">
-                  <div class="cstep-title">워킹그룹을 만들고 반복 사이클을 설계했습니다</div>
-                  <div class="cstep-desc">n차 실험 설계 → 결과 공유 → n+1차 킥오프 → 개선안 도출. <strong>이 사이클이 PM 없이도 돌아가도록</strong> 실험 설계서와 결과 보고서 체계를 만들었습니다.</div>
-                </div>
-              </div>
-              <div class="case-step">
-                <div class="cstep-n">02</div>
-                <div class="cstep-b">
-                  <div class="cstep-title">가설을 촘촘하게 설계했습니다</div>
-                  <div class="cstep-desc">실험 전 가설을 최대한 구체화하면 실험 비용이 줄고 위너 도출률이 높아집니다. <strong>진행한 주요 실험 가설 방향이 모두 위너와 일치</strong>했습니다. 운이 아니라 설계의 결과입니다.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="case-block">
-            <div class="case-insight">
-              <div class="ci-mark">인사이트</div>
-              <div class="ci-text">PM의 역할은 실험을 잘 하는 게 아닙니다. <em>팀 전체가 실험의 언어를 배우도록 만드는 것</em>이 PM의 일입니다. 이 프로세스는 2026년 애자일 조직 개편의 기반이 됐고, 배민클럽 구독자를 321만에서 680만으로 성장시키는 구조가 됐습니다.</div>
-            </div>
-          </div>
-        </div>
-        <div class="case-sidebar">
-          <div class="cs-results">
-            <div class="cs-result"><div class="cs-rv" style="color:var(--pink)">680만</div><div class="cs-rl">현재 배민클럽 구독자</div><div class="cs-rs">'24.09 321만 → '26.06</div></div>
-            <div class="cs-result"><div class="cs-rv" style="color:var(--gold)">애자일</div><div class="cs-rl">2026년 조직 개편의 기반</div><div class="cs-rs">실험 프로세스가 공식 채택</div></div>
-            <div class="cs-result"><div class="cs-rv" style="color:var(--blue)">-2%p</div><div class="cs-rl">일별 해지율 감소</div><div class="cs-rs">전체 대비 기준</div></div>
-            <div class="cs-result"><div class="cs-rv" style="color:var(--text2)">-5%</div><div class="cs-rl">해지방어 영역 이탈율 감소</div><div class="cs-rs">구조적 개선 기반 마련</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── P5 ── -->
-  <div class="pcard" id="p5">
-    <div class="pcard-summary" onclick="toggleP('p5')">
-      <div class="pcard-idx">05</div>
-      <div class="pcard-main">
-        <div class="pcard-meta">
-          <span class="co-chip co-kyobo">교보문고</span>
-          <span class="pcard-period">2020.07 — 2020.11 · 메인 기획</span>
-        </div>
-        <div class="pcard-title">교보문고 회원가입 전면 개편</div>
-        <div class="pcard-oneliner">클레임이 반복될 때 UI를 고치면 또 같은 문제가 납니다. 5가지 회원 유형을 재정의해 클레임 70% 감소를 달성했습니다.</div>
-      </div>
-      <div class="pcard-kpis">
-        <div class="pkpi"><div class="pkpi-val" style="color:var(--pink)">-70%</div><div class="pkpi-lbl">고객 클레임 감소</div></div>
-        <div class="pkpi"><div class="pkpi-val" style="color:var(--gold)">5유형</div><div class="pkpi-lbl">회원 구조 재정의</div></div>
-      </div>
-    </div>
-    <div class="pcard-footer" onclick="toggleP('p5')">
-      <div class="pcard-quote">"예외 케이스를 없애는 게 아니라 관리 가능한 구조로 만드는 것이 PM의 역할입니다."</div>
-      <div class="pcard-toggle"><span>케이스 보기</span><div class="toggle-icon">+</div></div>
-    </div>
-    <div class="pcard-detail">
-      <div class="case-wrap">
-        <div class="case-body">
-          <div class="case-block">
-            <div class="case-blk-label">문제 정의</div>
-            <div class="case-blk-text">
-              <p>일반·법인·아이디 없는 회원·제휴회원 등 <strong>5가지 유형이 한 구조 안에 혼재</strong>해 로그인 불가·중복 가입·인증 오류 클레임이 반복됐습니다.</p>
-              <p>UI를 고치는 방식으로 접근하면 또 같은 문제가 납니다. 유형 자체를 재정의해야 했습니다.</p>
-            </div>
-          </div>
-          <div class="case-block">
-            <div class="case-blk-label">내 결정과 이유</div>
-            <div class="case-steps">
-              <div class="case-step">
-                <div class="cstep-n">01</div>
-                <div class="cstep-b">
-                  <div class="cstep-title">5가지 유형을 A~E로 재정의하고 플로우를 분리했습니다</div>
-                  <div class="cstep-desc">각 유형별 가입·인증 플로우를 완전히 별도로 설계했습니다. <strong>예외 케이스를 없애는 게 아니라 관리 가능한 구조로 만드는 것</strong>이 목표였습니다.</div>
-                </div>
-              </div>
-              <div class="case-step">
-                <div class="cstep-n">02</div>
-                <div class="cstep-b">
-                  <div class="cstep-title">오프라인 가입자를 위한 경로를 새로 만들었습니다</div>
-                  <div class="cstep-desc">오프라인 CI 보유 + 아이디 미생성 회원이 온라인에서 이용할 방법이 없었습니다. 아이디 생성 프로세스를 신규 추가해 <strong>이 고객들의 온라인 접근성을 처음으로 확보</strong>했습니다.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="case-block">
-            <div class="case-insight">
-              <div class="ci-mark">인사이트</div>
-              <div class="ci-text">회원 문제는 UI보다 정책과 구조에서 시작됩니다. 이 관점은 이후 배민에서 구독 정책과 시스템 설계를 할 때 <em>그대로 이어졌습니다.</em></div>
-            </div>
-          </div>
-        </div>
-        <div class="case-sidebar">
-          <div class="cs-results">
-            <div class="cs-result"><div class="cs-rv" style="color:var(--pink)">-70%</div><div class="cs-rl">회원가입 관련 클레임 감소</div></div>
-            <div class="cs-result"><div class="cs-rv" style="color:var(--gold)">해결</div><div class="cs-rl">오프라인 가입자 온라인 접근 불가</div></div>
-          </div>
-          <div class="cs-svc">
-            <div class="cs-svc-label">서비스 확인</div>
-            <div class="cs-links">
-              <a class="cs-link" href="https://mmbr.kyobobook.co.kr/join/verify/self" target="_blank">교보문고 회원가입 보기</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ── P6 ── -->
   <div class="pcard" id="p6">
     <div class="pcard-summary" onclick="toggleP('p6')">
-      <div class="pcard-idx">06</div>
+      <div class="pcard-idx">07</div>
       <div class="pcard-main">
         <div class="pcard-meta">
           <span class="co-chip co-ssg">SSG.COM</span>
@@ -1207,6 +1252,79 @@ window.addEventListener('DOMContentLoaded', () => {
             <div class="cs-links">
               <a class="cs-link" href="https://member.ssg.com/member/findIdPw.ssg" target="_blank">아이디 찾기</a>
               <a class="cs-link" href="https://member.ssg.com/member/findIdPw.ssg?tabType=pw" target="_blank">비밀번호 찾기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── P5 ── -->
+  <div class="pcard" id="p5">
+    <div class="pcard-summary" onclick="toggleP('p5')">
+      <div class="pcard-idx">06</div>
+      <div class="pcard-main">
+        <div class="pcard-meta">
+          <span class="co-chip co-kyobo">교보문고</span>
+          <span class="pcard-period">2020.07 — 2020.11 · 메인 기획</span>
+        </div>
+        <div class="pcard-title">교보문고 회원가입 전면 개편</div>
+        <div class="pcard-oneliner">클레임이 반복될 때 UI를 고치면 또 같은 문제가 납니다. 5가지 회원 유형을 재정의해 클레임 70% 감소를 달성했습니다.</div>
+      </div>
+      <div class="pcard-kpis">
+        <div class="pkpi"><div class="pkpi-val" style="color:var(--pink)">-70%</div><div class="pkpi-lbl">고객 클레임 감소</div></div>
+        <div class="pkpi"><div class="pkpi-val" style="color:var(--gold)">5유형</div><div class="pkpi-lbl">회원 구조 재정의</div></div>
+      </div>
+    </div>
+    <div class="pcard-footer" onclick="toggleP('p5')">
+      <div class="pcard-quote">"예외 케이스를 없애는 게 아니라 관리 가능한 구조로 만드는 것이 PM의 역할입니다."</div>
+      <div class="pcard-toggle"><span>케이스 보기</span><div class="toggle-icon">+</div></div>
+    </div>
+    <div class="pcard-detail">
+      <div class="case-wrap">
+        <div class="case-body">
+          <div class="case-block">
+            <div class="case-blk-label">문제 정의</div>
+            <div class="case-blk-text">
+              <p>일반·법인·아이디 없는 회원·제휴회원 등 <strong>5가지 유형이 한 구조 안에 혼재</strong>해 로그인 불가·중복 가입·인증 오류 클레임이 반복됐습니다.</p>
+              <p>UI를 고치는 방식으로 접근하면 또 같은 문제가 납니다. 유형 자체를 재정의해야 했습니다.</p>
+            </div>
+          </div>
+          <div class="case-block">
+            <div class="case-blk-label">내 결정과 이유</div>
+            <div class="case-steps">
+              <div class="case-step">
+                <div class="cstep-n">01</div>
+                <div class="cstep-b">
+                  <div class="cstep-title">5가지 유형을 A~E로 재정의하고 플로우를 분리했습니다</div>
+                  <div class="cstep-desc">각 유형별 가입·인증 플로우를 완전히 별도로 설계했습니다. <strong>예외 케이스를 없애는 게 아니라 관리 가능한 구조로 만드는 것</strong>이 목표였습니다.</div>
+                </div>
+              </div>
+              <div class="case-step">
+                <div class="cstep-n">02</div>
+                <div class="cstep-b">
+                  <div class="cstep-title">오프라인 가입자를 위한 경로를 새로 만들었습니다</div>
+                  <div class="cstep-desc">오프라인 CI 보유 + 아이디 미생성 회원이 온라인에서 이용할 방법이 없었습니다. 아이디 생성 프로세스를 신규 추가해 <strong>이 고객들의 온라인 접근성을 처음으로 확보</strong>했습니다.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-block">
+            <div class="case-insight">
+              <div class="ci-mark">인사이트</div>
+              <div class="ci-text">회원 문제는 UI가 아니라 정책과 구조에서 시작됩니다. 이 관점은 이후 배민에서 구독 정책과 시스템을 설계할 때 <em>그대로 이어졌습니다.</em></div>
+            </div>
+          </div>
+        </div>
+        <div class="case-sidebar">
+          <div class="cs-results">
+            <div class="cs-result"><div class="cs-rv" style="color:var(--pink)">-70%</div><div class="cs-rl">회원가입 관련 클레임 감소</div></div>
+            <div class="cs-result"><div class="cs-rv" style="color:var(--gold)">해결</div><div class="cs-rl">오프라인 가입자 온라인 접근 불가</div></div>
+          </div>
+          <div class="cs-svc">
+            <div class="cs-svc-label">서비스 확인</div>
+            <div class="cs-links">
+              <a class="cs-link" href="https://mmbr.kyobobook.co.kr/join/verify/self" target="_blank">교보문고 회원가입 보기</a>
             </div>
           </div>
         </div>
@@ -1361,7 +1479,7 @@ window.addEventListener('DOMContentLoaded', () => {
   <div class="contact-left">
     <div class="sec-tag">Contact</div>
     <h2 class="contact-headline">함께 결정해 나갈<br><span>다음 문제</span>가 있다면</h2>
-    <p class="contact-sub">방향이 필요한 문제를 가지고 오세요.<br>구조를 보고, 기준을 만들고, 숫자로 증명합니다.</p>
+    <p class="contact-sub">방향이 필요한 문제를 가지고 오세요.<br>구조를 보고, 기준을 잡고, 같이 풀어갑니다.</p>
   </div>
   <div class="contact-right">
     <a href="mailto:che01073519355@gmail.com" class="contact-link primary">
@@ -1405,7 +1523,7 @@ window.addEventListener('scroll',()=>{
   const pnb=document.getElementById('project-nav');
   if(!pnb) return;
   const nb=pnb.getBoundingClientRect().bottom;
-  ['p1','p2','p3','p4','p5','p6'].forEach((id,i)=>{
+  ['p1','p4','p4b','p2','p3','p6','p5'].forEach((id,i)=>{
     const r=document.getElementById(id)?.getBoundingClientRect();
     if(r&&r.top<=nb+20&&r.bottom>nb){
       document.querySelectorAll('.pnav-btn').forEach(b=>b.classList.remove('active'));
