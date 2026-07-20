@@ -6,7 +6,6 @@
 <title>천하은 — Product Manager</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@700;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
-
 :root {
   --bg:      #FBF8F2;
   --bg2:     #F5EFE4;
@@ -26,11 +25,9 @@
   --blue:    #A0521A;
   --purple:  #8B4513;
 }
-
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;line-height:1.75;overflow-x:hidden;}
-
 /* ─── INTRO ─── */
 #intro{
   position:fixed;inset:0;z-index:9999;
@@ -69,7 +66,6 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-seri
   .intro-name-row{flex-direction:column;gap:0;align-items:center;}
   .intro-word{font-size:clamp(48px,14vw,72px);}
 }
-
 /* ─── PHILOSOPHY SCREEN ─── */
 #philosophy-screen{
   position:fixed;inset:0;z-index:9998;
@@ -127,7 +123,6 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-seri
 }
 @keyframes scan{0%{left:-100%}100%{left:100%}}
 body.intro-active{overflow:hidden;}
-
 /* ─── NAV ─── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
@@ -150,7 +145,6 @@ nav{
 }
 .nav-links a:hover{color:var(--text);background:rgba(255,255,255,0.04);}
 .nav-links a.active{color:var(--pink);}
-
 /* ─── HERO ─── */
 #hero{
   min-height:100vh;
@@ -206,7 +200,6 @@ nav{
   transition:all 0.2s;
 }
 .btn-g:hover{border-color:var(--pink-b);color:var(--pink);}
-
 /* hero right — big metrics */
 .hero-right{
   display:grid;grid-template-columns:1fr 1fr;
@@ -230,7 +223,6 @@ nav{
 .hm-sub{font-size:11px;color:var(--text3);margin-top:2px;opacity:0.6;}
 .hero-metric.accent{background:var(--pink-dim);border:1px solid var(--pink-b);}
 .hero-metric.accent .hm-label{color:var(--text2);}
-
 /* ─── PROJECT NAV ─── */
 #project-nav{
   position:sticky;top:60px;z-index:90;
@@ -256,7 +248,6 @@ nav{
   transition:background 0.2s;
 }
 .pnav-btn.active .pnav-dot{background:var(--pink);}
-
 /* ─── PROJECTS ─── */
 #projects{padding:60px 0 80px;}
 .projects-intro{padding:0 60px 56px;display:flex;align-items:flex-end;justify-content:space-between;}
@@ -273,7 +264,6 @@ nav{
   letter-spacing:-0.025em;line-height:1.15;
 }
 .projects-hint{font-size:12px;color:var(--text3);letter-spacing:0.04em;}
-
 /* Project card */
 .pcard{
   border-top:1px solid var(--border);
@@ -282,7 +272,6 @@ nav{
 }
 .pcard:last-child{border-bottom:1px solid var(--border);}
 .pcard.open{background:rgba(255,143,179,0.02);}
-
 /* card summary */
 .pcard-summary{
   padding:48px 60px;
@@ -292,7 +281,6 @@ nav{
   gap:40px;align-items:start;
 }
 .pcard-summary:hover .pcard-title{color:var(--pink);}
-
 .pcard-idx{
   font-family:'Inter',sans-serif;
   font-size:clamp(32px,4vw,52px);
@@ -303,7 +291,6 @@ nav{
   padding-top:4px;
 }
 .pcard.open .pcard-idx{color:var(--pink);}
-
 .pcard-main{}
 .pcard-meta{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
 .co-chip{
@@ -315,7 +302,6 @@ nav{
 .co-ssg{background:rgba(91,156,246,0.08);border:1px solid rgba(91,156,246,0.2);color:var(--blue);}
 .co-kyobo{background:rgba(155,126,255,0.08);border:1px solid rgba(155,126,255,0.2);color:var(--purple);}
 .pcard-period{font-family:'Inter',sans-serif;font-size:11px;color:var(--text3);}
-
 .pcard-title{
   font-size:clamp(22px,2.5vw,32px);font-weight:900;
   letter-spacing:-0.025em;line-height:1.2;
@@ -325,7 +311,6 @@ nav{
   font-size:14px;color:var(--text2);line-height:1.75;
   max-width:560px;font-weight:300;
 }
-
 /* kpis inline */
 .pcard-kpis{
   display:flex;flex-direction:column;gap:12px;
@@ -338,7 +323,6 @@ nav{
   letter-spacing:-0.03em;line-height:1;
 }
 .pkpi-lbl{font-size:11px;color:var(--text3);margin-top:2px;}
-
 /* expand toggle */
 .pcard-footer{
   display:flex;align-items:center;justify-content:space-between;
@@ -370,7 +354,6 @@ nav{
   transition:transform 0.35s,background 0.2s;
 }
 .pcard.open .toggle-icon{transform:rotate(45deg);background:var(--pink);color:#fff;border-color:var(--pink);}
-
 /* case study expand */
 .pcard-detail{
   display:none;
@@ -381,13 +364,11 @@ nav{
   animation:fadeUp 0.28s ease-out;
 }
 @keyframes fadeUp{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-
 .case-wrap{
   padding:52px 60px 52px 160px;
   display:grid;grid-template-columns:1fr 340px;
   gap:60px;align-items:start;
 }
-
 .case-body{}
 .case-block{margin-bottom:40px;}
 .case-block:last-child{margin-bottom:0;}
@@ -404,7 +385,6 @@ nav{
 .case-blk-text strong{color:var(--text);font-weight:600;}
 .case-blk-text p{margin-bottom:12px;}
 .case-blk-text p:last-child{margin-bottom:0;}
-
 .case-steps{display:flex;flex-direction:column;gap:0;}
 .case-step{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--border);}
 .cstep-n{
@@ -416,7 +396,6 @@ nav{
 .cstep-title{font-size:14px;font-weight:700;margin-bottom:6px;color:var(--text);}
 .cstep-desc{font-size:14px;color:var(--text2);line-height:1.85;font-weight:300;}
 .cstep-desc strong{color:var(--gold);font-weight:600;}
-
 /* insight pullquote */
 .case-insight{
   background:var(--bg3);
@@ -435,7 +414,6 @@ nav{
   font-weight:500;letter-spacing:-0.01em;
 }
 .ci-text em{font-style:normal;color:var(--pink);}
-
 .case-tradeoff{
   margin-top:16px;padding:20px 24px;
   background:rgba(245,166,35,0.05);
@@ -448,7 +426,6 @@ nav{
   color:var(--gold);margin-bottom:8px;
 }
 .ct-text{font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;}
-
 /* case sidebar */
 .case-sidebar{}
 .cs-results{display:flex;flex-direction:column;gap:2px;margin-bottom:24px;}
@@ -463,7 +440,6 @@ nav{
 }
 .cs-rl{font-size:12px;color:var(--text2);line-height:1.5;}
 .cs-rs{font-size:11px;color:var(--text3);margin-top:2px;}
-
 .cs-svc{}
 .cs-svc-label{
   font-family:'Inter',sans-serif;
@@ -487,7 +463,6 @@ nav{
   border:1px solid var(--border);background:#000;
 }
 .cs-video video{width:100%;display:block;max-height:200px;object-fit:contain;}
-
 /* ─── IMPACT ─── */
 #impact{
   background:var(--bg2);
@@ -517,7 +492,6 @@ nav{
 }
 .impact-lbl{font-size:13px;color:var(--text2);line-height:1.5;}
 .impact-ctx{font-size:11px;color:var(--text3);margin-top:4px;}
-
 /* ─── CAREER ─── */
 #career{padding:100px 60px;background:var(--bg);}
 .career-grid{
@@ -545,7 +519,6 @@ nav{
   border:1px solid var(--border);
   border-radius:3px;color:var(--text3);
 }
-
 /* ─── CONTACT ─── */
 #contact{
   background:var(--bg2);border-top:1px solid var(--border);
@@ -575,13 +548,11 @@ nav{
 .contact-link.primary{background:var(--pink);color:#F7F3EC;border-color:var(--pink);font-weight:700;}
 .contact-link.primary:hover{opacity:0.88;}
 .cl-icon{width:16px;height:16px;opacity:0.5;}
-
 footer{
   padding:24px 60px;border-top:1px solid var(--border);
   display:flex;justify-content:space-between;align-items:center;
 }
 .ft{font-family:'Inter',sans-serif;font-size:11px;color:var(--text3);}
-
 /* ─── RESPONSIVE ─── */
 @media(max-width:1100px){
   #hero{grid-template-columns:1fr;}
@@ -613,7 +584,6 @@ footer{
 </style>
 </head>
 <body class="intro-active">
-
 <!-- ─── INTRO ─── -->
 <div id="intro">
   <div class="intro-inner">
@@ -624,8 +594,6 @@ footer{
     <div class="intro-sub" id="intro-sub">Product Manager</div>
   </div>
 </div>
-
-
 <script>
 window.addEventListener('DOMContentLoaded', () => {
   const w1=document.getElementById('w1'),w2=document.getElementById('w2');
@@ -641,7 +609,6 @@ window.addEventListener('DOMContentLoaded', () => {
   setTimeout(()=>{intro.remove();},2800);
 });
 </script>
-
 <!-- ─── NAV ─── -->
 <nav>
   <div class="nav-logo">CHECHE</div>
@@ -655,7 +622,6 @@ window.addEventListener('DOMContentLoaded', () => {
     <a href="#contact">연락</a>
   </div>
 </nav>
-
 <!-- ─── HERO ─── -->
 <section id="hero">
   <div class="hero-noise"></div>
@@ -665,8 +631,8 @@ window.addEventListener('DOMContentLoaded', () => {
     <div class="hero-role">우아한형제들 · SSG.COM · 교보문고</div>
     <p class="hero-statement">
       더 많은 사람의 일상에 변화를 주는 서비스를 만들고 싶습니다.<br>
-      변화를 시도하며 7년이라는 시간을 촘촘히 채워갑니다. <br>
-       그래서 구조를 먼저 보고, 기준을 만들고, 숫자로 확인합니다.
+      변화를 시도하며 7년이라는 시간을 촘촘히 채워갑니다. <br>
+       그래서 구조를 먼저 보고, 기준을 만들고, 숫자로 확인합니다.
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn-p">프로젝트 보기 →</a>
@@ -696,7 +662,6 @@ window.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 </section>
-
 <!-- ─── PHILOSOPHY ─── -->
 <section id="philosophy" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:100px 60px;">
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1200px;">
@@ -724,7 +689,6 @@ window.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 </section>
-
 <!-- ─── PROJECT NAV ─── -->
 <div id="project-nav">
   <button class="pnav-btn active" onclick="focusP('p1',this)"><span class="pnav-dot"></span>01 배민클럽 런칭</button>
@@ -735,7 +699,6 @@ window.addEventListener('DOMContentLoaded', () => {
   <button class="pnav-btn" onclick="focusP('p6',this)"><span class="pnav-dot"></span>06 SSG ID/PW</button>
   <button class="pnav-btn" onclick="focusP('p5',this)"><span class="pnav-dot"></span>07 교보 회원가입</button>
 </div>
-
 <!-- ─── PROJECTS ─── -->
 <section id="projects">
   <div class="projects-intro">
@@ -745,7 +708,6 @@ window.addEventListener('DOMContentLoaded', () => {
     </div>
     <div class="projects-hint">클릭하면 케이스 전문을 볼 수 있습니다</div>
   </div>
-
   <!-- ── P1 ── -->
   <div class="pcard" id="p1">
     <div class="pcard-summary" onclick="toggleP('p1')">
@@ -847,7 +809,6 @@ window.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   </div>
-
   <!-- ── P4 ── -->
   <div class="pcard" id="p4">
     <div class="pcard-summary" onclick="toggleP('p4')">
@@ -949,7 +910,6 @@ window.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   </div>
-
   <!-- ── P4B ── -->
   <div class="pcard" id="p4b">
     <div class="pcard-summary" onclick="toggleP('p4b')">
@@ -1007,7 +967,7 @@ window.addEventListener('DOMContentLoaded', () => {
               <div class="case-step">
                 <div class="cstep-n" style="color:var(--blue)">03 →</div>
                 <div class="cstep-b">
-                  <div class="cstep-title">방향 전환 — 개인화 혜택 우선순위 노출, 2% 가입전환율 상승/div>
+                  <div class="cstep-title">방향 전환 — 개인화 혜택 우선순위 노출, 2% 가입전환율 상승</div>
                   <div class="cstep-desc">절감 금액 대신, <strong>고객 데이터 기반으로 혜택의 노출 및 안쓴혜택을 강조</strong>하는 방향으로 전환했습니다. 그 결과 해당 지면에 대한 가입율이 2% 상승하였습니다. </div>
                 </div>
               </div>
@@ -1028,13 +988,12 @@ window.addEventListener('DOMContentLoaded', () => {
           <div class="cs-results">
             <div class="cs-result"><div class="cs-rv" style="color:var(--pink)">+10%</div><div class="cs-rl">배민클럽 가입률 상승</div><div class="cs-rs">장바구니·주문서 진입점 전략</div></div>
             <div class="cs-result"><div class="cs-rv" style="color:var(--gold)">+8%</div><div class="cs-rl">구독 잔존율 상승</div><div class="cs-rs">주문 시점 혜택 인지 실험</div></div>
-            <div class="cs-result"><div class="cs-rv" style="color:var(--blue)">B &gt; A</div><div class="cs-rl">개인화 혜택 실험군 우위</div><div class="cs-rs">2% 가입율 상승/div></div>
+            <div class="cs-result"><div class="cs-rv" style="color:var(--blue)">B &gt; A</div><div class="cs-rl">개인화 혜택 실험군 우위</div><div class="cs-rs">2% 가입율 상승</div></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <!-- ── P2 ── -->
   <div class="pcard" id="p2">
     <div class="pcard-summary" onclick="toggleP('p2')">
@@ -1109,7 +1068,6 @@ window.addEventListener('DOMContentLoaded', () => {
             <div class="cs-result"><div class="cs-rv" style="color:var(--pink)">60억</div><div class="cs-rl">비용 손실 구조 완전 해소</div><div class="cs-rs">정책 재설계로 해결, 기능 개발 아님</div></div>
             <div class="cs-result"><div class="cs-rv" style="color:var(--gold)">50만</div><div class="cs-rl">오픈 50일 가입자</div><div class="cs-rs">목표치 조기 달성</div></div>
             <div class="cs-result"><div class="cs-rv" style="color:var(--blue)">+10%p</div><div class="cs-rl">타 상품 대비 신규 가입 비중</div><div class="cs-rs">가입자 순증 기여</div></div>
-
           </div>
           <div class="cs-svc">
             <div class="cs-svc-label">서비스 확인</div>
@@ -1123,7 +1081,6 @@ window.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   </div>
-
   <!-- ── P3 ── -->
   <div class="pcard" id="p3">
     <div class="pcard-summary" onclick="toggleP('p3')">
@@ -1206,11 +1163,10 @@ window.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   </div>
-
   <!-- ── P6 ── -->
   <div class="pcard" id="p6">
     <div class="pcard-summary" onclick="toggleP('p6')">
-      <div class="pcard-idx">07</div>
+      <div class="pcard-idx">06</div>
       <div class="pcard-main">
         <div class="pcard-meta">
           <span class="co-chip co-ssg">SSG.COM</span>
@@ -1280,11 +1236,10 @@ window.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   </div>
-
   <!-- ── P5 ── -->
   <div class="pcard" id="p5">
     <div class="pcard-summary" onclick="toggleP('p5')">
-      <div class="pcard-idx">06</div>
+      <div class="pcard-idx">07</div>
       <div class="pcard-main">
         <div class="pcard-meta">
           <span class="co-chip co-kyobo">교보문고</span>
@@ -1299,7 +1254,7 @@ window.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
     <div class="pcard-footer" onclick="toggleP('p5')">
-      <div class="pcard-quote">"관리 가능한 구조로 만드는 것이 PM의 역할입니다."</div>
+      <div class="pcard-quote">"예외 케이스를 없애는 게 아니라 관리 가능한 구조로 만드는 것이 PM의 역할입니다."</div>
       <div class="pcard-toggle"><span>케이스 보기</span><div class="toggle-icon">+</div></div>
     </div>
     <div class="pcard-detail">
@@ -1353,9 +1308,7 @@ window.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   </div>
-
 </section>
-
 <!-- ─── IMPACT ─── -->
 <section id="impact">
   <div class="impact-header">
@@ -1388,14 +1341,12 @@ window.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 </section>
-
 <!-- ─── SKILLS ─── -->
 <section id="skills" style="background:var(--bg);padding:100px 60px;">
   <div class="sec-tag">Core Competencies</div>
   <h2 class="sec-h" style="margin-bottom:16px;">PM으로서의 역량</h2>
   <p style="font-size:15px;color:var(--text2);font-weight:300;line-height:1.9;margin-bottom:56px;">도구보다 사고방식, 기능보다 구조를 중시합니다.</p>
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;">
-
     <div style="background:var(--bg3);padding:36px 32px;transition:background 0.3s;" onmouseover="this.style.background='var(--bg4)'" onmouseout="this.style.background='var(--bg3)'">
       <div style="font-size:15px;font-weight:700;margin-bottom:12px;">구조 설계 &amp; 정책 수립</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;margin-bottom:20px;">복잡한 시스템 간 정책 불일치를 발견하고 구조적으로 해소. 기능 개발 이전에 정산·법무·운영 관점의 정책을 선제적으로 설계.</div>
@@ -1406,7 +1357,6 @@ window.addEventListener('DOMContentLoaded', () => {
         <span style="font-size:10px;padding:3px 10px;border:1px solid var(--border);border-radius:3px;color:var(--text3);">법무 검토</span>
       </div>
     </div>
-
     <div style="background:var(--bg3);padding:36px 32px;transition:background 0.3s;" onmouseover="this.style.background='var(--bg4)'" onmouseout="this.style.background='var(--bg3)'">
       <div style="font-size:15px;font-weight:700;margin-bottom:12px;">실험 설계 &amp; 데이터 분석</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;margin-bottom:20px;">가설 수립 → 실험 설계 → 결과 측정의 전 사이클 운영. 반복 가능한 실험 프로세스 구축 및 워킹그룹 리딩 경험 보유.</div>
@@ -1417,7 +1367,6 @@ window.addEventListener('DOMContentLoaded', () => {
         <span style="font-size:10px;padding:3px 10px;border:1px solid var(--border);border-radius:3px;color:var(--text3);">Rehash</span>
       </div>
     </div>
-
     <div style="background:var(--bg3);padding:36px 32px;transition:background 0.3s;" onmouseover="this.style.background='var(--bg4)'" onmouseout="this.style.background='var(--bg3)'">
       <div style="font-size:15px;font-weight:700;margin-bottom:12px;">다부서 조율 &amp; 글로벌 협업</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;margin-bottom:20px;">20개 이상 유관부서 동시 조율 경험. Google 등 글로벌 파트너와의 기술·정산 협의. 문서화 전략으로 실시간 소통이 어려운 외부 협업을 해결.</div>
@@ -1427,7 +1376,6 @@ window.addEventListener('DOMContentLoaded', () => {
         <span style="font-size:10px;padding:3px 10px;border:1px solid var(--border);border-radius:3px;color:var(--text3);">요구사항 관리</span>
       </div>
     </div>
-
     <div style="background:var(--bg3);padding:36px 32px;transition:background 0.3s;" onmouseover="this.style.background='var(--bg4)'" onmouseout="this.style.background='var(--bg3)'">
       <div style="font-size:15px;font-weight:700;margin-bottom:12px;">UX 설계 &amp; 프로덕트 기획</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;margin-bottom:20px;">IA 수립부터 화면설계서, 테스트 시나리오까지 전 단계 직접 작성. 사용자 행동 데이터 기반으로 마찰 포인트를 찾고 구조적으로 제거.</div>
@@ -1438,7 +1386,6 @@ window.addEventListener('DOMContentLoaded', () => {
         <span style="font-size:10px;padding:3px 10px;border:1px solid var(--border);border-radius:3px;color:var(--text3);">화면설계서</span>
       </div>
     </div>
-
     <div style="background:var(--bg3);padding:36px 32px;transition:background 0.3s;" onmouseover="this.style.background='var(--bg4)'" onmouseout="this.style.background='var(--bg3)'">
       <div style="font-size:15px;font-weight:700;margin-bottom:12px;">AI &amp; 자동화 도구 활용</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;margin-bottom:20px;">n8n을 활용한 업무 자동화, Cursor AI 기반 프로토타이핑 경험 보유. 도구를 통해 PM으로서의 실행 속도를 높입니다.</div>
@@ -1448,7 +1395,6 @@ window.addEventListener('DOMContentLoaded', () => {
         <span style="font-size:10px;padding:3px 10px;border:1px solid var(--border);border-radius:3px;color:var(--text3);">자동화 설계</span>
       </div>
     </div>
-
     <div style="background:var(--bg3);padding:36px 32px;border:1px solid var(--pink-b);transition:background 0.3s;" onmouseover="this.style.background='var(--bg4)'" onmouseout="this.style.background='var(--bg3)'">
       <div style="font-size:15px;font-weight:700;margin-bottom:12px;">PM 오너십 &amp; 리딩</div>
       <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;margin-bottom:20px;">배민클럽 런칭, YouTube 결합상품 등 사업 전체 리딩 PO 경험. 요구사항이 폭발하는 환경에서 원칙을 만들고 기준으로 결정합니다.</div>
@@ -1458,10 +1404,8 @@ window.addEventListener('DOMContentLoaded', () => {
         <span style="font-size:10px;padding:3px 10px;border:1px solid var(--pink-b);border-radius:3px;color:var(--pink);">워킹그룹 운영</span>
       </div>
     </div>
-
   </div>
 </section>
-
 <!-- ─── CAREER ─── -->
 <section id="career">
   <div class="sec-tag">Career</div>
@@ -1495,7 +1439,6 @@ window.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 </section>
-
 <!-- ─── CONTACT ─── -->
 <section id="contact">
   <div class="contact-left">
@@ -1514,12 +1457,10 @@ window.addEventListener('DOMContentLoaded', () => {
     </a>
   </div>
 </section>
-
 <footer>
   <div class="ft">천하은 · Product Manager · 2025</div>
   <div class="ft">우아한형제들 · SSG.COM · 교보문고</div>
 </footer>
-
 <script>
 function toggleP(id){
   const el=document.getElementById(id);
